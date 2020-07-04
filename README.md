@@ -1,11 +1,13 @@
 # Reading-notes-201
 ## welcome to this website  
-here I will take my reading notes for each class you can see the table below, I will update it daily  
+here I will take my reading notes for each class you can see the table below, I will update it daily 
+
+![notes](https://www.invespcro.com/blog/images/blog-images/main.png)
 
  
 Reading number | Link
 ---------------|----------
-Reading01| [Link]()
+Reading01| [Link](https://github.com/messeili/reading-notes-201/read01)
 reading02| [Link]()
 reading03| [Link]()
 reading04| [Link]()
