@@ -7,7 +7,7 @@ here I will take my reading notes for each class you can see the table below, I 
  
 Reading number | Link
 ---------------|----------
-Reading01| [Link](https://github.com/messeili/reading-notes-201/read01)
+Reading01| [Link](https://github.com/messeili/reading-notes-201/class01)
 reading02| [Link]()
 reading03| [Link]()
 reading04| [Link]()
