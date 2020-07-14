@@ -18,12 +18,12 @@ Different visitors to your site will have different sized screens that show diff
 Resolution refers to the number of dots a screen shows per inch. Some devices have a higher resolution than desktop computers and most operating systems allow users to adjust the resolution of their screens. 
 
 ## Fixed and Liquid layouts
-![read8-1](img/read8-1.png)
-![read8-1](img/read8-2.png)  
+![read8-1](https://github.com/messeili/reading-notes-201/blob/master/img/read8-1.PNG)
+![read8-2](https://github.com/messeili/reading-notes-201/blob/master/img/read8-2.PNG)  
 
 
 ## Layout grids
-![read8-1](img/read8-3.png)
+![read8-3](https://github.com/messeili/reading-notes-201/blob/master/img/read8-3.PNG)
  
 
 ## Css frameworks
