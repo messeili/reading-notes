@@ -25,7 +25,7 @@ Resolution refers to the number of dots a screen shows per inch. Some devices ha
 
 
 ## Layout grids
-![read8-3](https://github.com/messeili/reading-notes-201/blob/master/img/read8-3.PNG)
+![read8-3](img/read8-3.PNG)
  
 
 ## Css frameworks
