@@ -1,4 +1,4 @@
-##Controlling the position of elements
+## Controlling the position of elements
 * Static:  
 In normal flow, each block-level element sits on top of the next one. Since this is the default way in which browsers treat HTML elements, you do not need a CSS property to indicate that elements should appear in normal flow, but the syntax would be:
 position: static  
@@ -14,25 +14,25 @@ It positions the element in relation to the browser window. Therefore, when a us
 ##Screen sizes:
 Different visitors to your site will have different sized screens that show different amounts of information, so your design needs to be able to work on a range of different sized screens.
 
-##Screen resolution:  
+## Screen resolution:  
 Resolution refers to the number of dots a screen shows per inch. Some devices have a higher resolution than desktop computers and most operating systems allow users to adjust the resolution of their screens. 
 
-##Fixed and Liquid layouts
+## Fixed and Liquid layouts
 ![read8-1](img/read8-1.png)
 ![read8-1](img/read8-2.png)  
 
 
-##Layout grids
+## Layout grids
 ![read8-1](img/read8-3.png)
  
 
-##Css frameworKs
+## Css frameworks
 advantages
-They save you from  ● repeatedly writing code for the same tasks.
-They will have been tested  ● across different browser versions (which helps avoid browser bugs).
+They save you from repeatedly writing code for the same tasks.
+They will have been tested across different browser versions (which helps avoid browser bugs).
 disadvantages
-They often require that you  ● use class names in your HTML code that only control the presentation of the page (rather than describe its content).
-In order to satisfy a wide  ● variety of needs, they often contain more code than you need for your particular web page (commonly referred to as code “bloat”).
+They often require that you use class names in your HTML code that only control the presentation of the page (rather than describe its content).
+In order to satisfy a wide variety of needs, they often contain more code than you need for your particular web page (commonly referred to as code “bloat”).
 One of the most popular uses of CSS frameworks is in creating grids to layout pages. There are several grid frameworks out there, but the one we will be looking at over the next few pages is the 960 Grid System (available at www.960.gs).
 960.gs provides a style sheet that you can include in your HTML pages. Once our page links to this style sheet, you can provide the appropriate classes to your HTML code and it will create multiple column layouts for you. The 960.gs website also provides templates you can 
 download to help design your pages using a 12 column grid. (In addition, there is a variation on the grid that uses 16 columns.)
