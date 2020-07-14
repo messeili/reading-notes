@@ -1,3 +1,5 @@
+# Layouts
+
 ## Controlling the position of elements
 * Static:  
 In normal flow, each block-level element sits on top of the next one. Since this is the default way in which browsers treat HTML elements, you do not need a CSS property to indicate that elements should appear in normal flow, but the syntax would be:
