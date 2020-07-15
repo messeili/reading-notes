@@ -88,8 +88,8 @@ removeAttribute() : removes the attributes.
 Cross-site Scripting (XSS) attacks.
 if you add HTML to a page using inerHTML (or several jQuery methods), you need to be aware of Cross-Site-Scripting Attacks or XSS, other wise an attacker could gain access to your users' accounts.
 ```
-##Why problem domains are hard
+## Why problem domains are hard
 The big issue is that many problem domains are like a puzzle with a blurry picture or no picture at all.you can’t really see what you are trying to build very clearly, The same thing happens when writing code. Writing code is a lot like putting together a jigsaw puzzle. We put together code with the purpose of building components that we have taken out of the “bigger picture” of the problem domain.
 
-##Programming is easy if you understand the problem domain.
+## Programming is easy if you understand the problem domain.
 understanding the problem is the most critical piece to the equation. It is very difficult to solve a problem before you know the question. It’s like buzzing in on Jeopardy before you hear the clue and shouting out random questions.
