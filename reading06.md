@@ -1,4 +1,4 @@
-##Objects  
+## Objects  
 
 Objects group together a set of variables and function to create a model of a something you would recognize from the real world,
 
@@ -31,7 +31,7 @@ The code above, you can see name,rooms,booked,gtm, and roomTypes : all of htese 
 
 You accessing an Object by using what we call a DOT NOTATION It is shown above in the comments.
 
-##Document Object Model.
+## Document Object Model.
 The Document object model (DOM) specifies how browsers shuould create a model of an HTML page and how JavaScript can access and update the contents of a web page while it is in the browser window.
 
 You can imagin that the HTML page is like a tree, each element has some branches under it all these branched has one parent in the top of it. which it is the <html> tag .
@@ -61,7 +61,7 @@ The Attribute Nodes Attribute nodes are not children of the element.
 
 Text Nodes Once you have accessed an element node, you can then reach the text within that element
 
-Working with the DOM tree.
+## Working with the DOM tree.
 Access the elements : you can access any element in the DOM by using these selectors:
 ```
 getElementById(id name) : Used to select an element with a specific id.
