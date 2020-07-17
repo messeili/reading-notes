@@ -1,9 +1,9 @@
-## The markuo text that may appear in HTML page  
+## The markup text that may appear in HTML page  
 
 1. **Structural markup**: the elements that you can use to describe both headings and paragraphs
 1. **Semantic markup**: which provides extra information; such as where emphasis is placed in a sentence, that something you have written is a quotation (and who said it), the meaning of acronyms, and so on.
 
-* **Structuaral Markup:**
+ **Structuaral Markup:**
 ```
 * <p> paragraph
 * <i> italic
@@ -12,7 +12,7 @@
 
 ```
 
-* **Semantic Markup:**
+ **Semantic Markup:**
 ```
 <strong>
 <q>
@@ -20,13 +20,15 @@
 <defn>
 <strong>
 <em>
+
 ```
 
 ## CSS associates Style rules with htML elements
 ![img01](img/reading-02-1.JPG)  
 
 ## You can link HTML to CSS using in two different ways:
-* Using external css:
+* external css:
+
 ```
 <link>
 The <link> element can be used in an HTML document to tell the browser where to find the CSS file used to style the page. It is an empty element (meaning it does not need a closing tag), and it lives inside the <head> element. It should use three attributes:
@@ -34,7 +36,6 @@ The <link> element can be used in an HTML document to tell the browser where to 
 href
 type
 rel
-
 
 ```
 ## CSS Selectors:
