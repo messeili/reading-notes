@@ -71,7 +71,7 @@ You create an array and give it a name just like you would any other variable (u
 The values are assigned to the array inside a pair of square brackets, and each value is separated by a comma. The values in the array do not need to be the same data type, so you can store a string, a number and a Boolean all in the same array. 
 
 ### Logical Operators
-![img06](img/reading-02-6.jpg)
+![img06](img/reading-02-6.JPG)
 
 
 
