@@ -17,8 +17,8 @@ The overflow property is particularly handy because some browsers allow users to
 ![img01](img/reading-03-1.JPG)
 
 ## Statements:
-* IF else:
+#### IF else:
 ![img02](img/reading-03-2.JPG)
 
-* Switch :
+### Switch :
 ![img03](img/reading-03-3.JPG)
