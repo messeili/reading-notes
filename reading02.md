@@ -43,7 +43,7 @@ There are many different types of CSS selector that allow you to target rules to
 The table on the opposite page introduces the most commonly used CSS selectors.
 On this page, there is an HTML file to demonstrate which elements these CSS selectors would apply to.
 
-![img02](img/reading-02-2.jpg)
+![img02](img/reading-02-2.JPG)
 
 ## Javascript Instructions:
 * Statements
@@ -57,13 +57,13 @@ A script will have to temporarily store the bits of information it needs to do i
 A variable is a good name for this concept because the data stored in a variable can change (or vary) each time a script runs.
 
 ### How to declare a variable:
-![img03](img/reading-02-3.jpg)
+![img03](img/reading-02-3.JPG)
 
 ### Data types:
-![img04](img/reading-02-4.jpg)
+![img04](img/reading-02-4.JPG)
 
 ### Naming the variables:
-![img05](img/reading-02-5.jpg)
+![img05](img/reading-02-5.JPG)
 
 ### ARRAYS
 An array is a special type of variable. It doesn't just store one value; it stores a list of values. 
