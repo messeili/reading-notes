@@ -1,4 +1,4 @@
-# Read01: Respoonsive web design and floats
+# Read01: Responsive web design and floats
   
  ![js image](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyfj6RGY_ydHDLwR0Ami4u1Fr9coLTVG1l3XNMxbqcOawfGTo&s) 
 
