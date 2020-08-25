@@ -1,4 +1,4 @@
-# Read01: jQuery
+# Read02: jQuery
 
 ![js image](https://www.webdesignerdepot.com/cdn-origin/uploads/2019/07/featured_jquery.jpg)
 
