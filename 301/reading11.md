@@ -2,6 +2,8 @@
 
 ![ejs image](https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_f9dd821cb48125c63c64b6f5c7552372/ejs.png) 
 
+EJS is templating language that use to generate html files at the end. It used in need to a way to create dynamic content to the web page based on the data coming from the api and OFC we can’t get that goal by static html.
+
 **Install**
 It's easy to install EJS with NPM.
 ```
