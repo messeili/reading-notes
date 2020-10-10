@@ -44,9 +44,10 @@ getFromApi('amman')
 
 ### 4.Promises()
 
-Unlike other core languages like Java, javaScript works in a single thread, that’s mean each line should be finished in the stack so we can render all the code, but calling data from an outside source (API) may take some time (longer than rendering the code itself), so it will cause some problems in the website especially if some of the code pieces was depending in the data returning.
-
-Here comes the promises job, whenever we want to get data from outside source, another thread will be created for that calling,working parallel to the main thread.
+A promise is an object that wraps an asynchronous operation and notifies when it’s done. This sounds exactly like callbacks, but the important differences are in the usage of Promises. Instead of providing a callback, a promise has its own methods which you call to tell the promise what will happen when it is successful or when it fails. The methods a promise provides are “then(…)” for when a successful result is available and “catch(…)” for when something went wrong.
+There are lots of frameworks for creating and dealing with promises in JavaScript, but all of the examples below assumes that we are using native JavaScript promises as introduced in ES6.
 
 ### 5.Are all callback functions considered to be Asynchronous? Why or Why Not?
+No. Only input and output functions are usually asynchronous, but many other callbacks are synchronous.
+
 
