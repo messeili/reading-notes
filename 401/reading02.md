@@ -19,8 +19,6 @@ A package is a directory with one or more modules inside of it and a package.jso
 
 npm, short for Node Package Manager, is two things: first and foremost, it is an online repository for the publishing of open-source Node.js projects; second, it is a command-line utility for interacting with said repository that aids in package installation, version management, and dependency management.
 
-### Provide code snippets showing 3 different ways to export a function from a node module
-
 ### Vocabulary Terms
 
 - ecosystem: Managed lifecycle and dependency injection for your application components.
