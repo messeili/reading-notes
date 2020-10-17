@@ -1,102 +1,54 @@
-# Reading03: Data Modeling & NoSQL Databases
+# Reading06: HTTP and REST
 
-## Questions:
+## Review, Research, and Discussion
 
-##### Name 3 advantages to Test Driven Development
+Define three related pieces of data in a possible application. An example for a store application might be Product, Category and Department. Describe the constraints and rules on each piece of data and how you would relate these pieces to each other. For example, each Product has a Category and belongs in a Department.
 
-1. Better program design and higher code quality
-2. Detailed project documentation
-3. TDD reduces the time required for project development
+##### What is the advantage of an ORM, like Mongoose?
 
-##### In what case would you need to use beforeEach() or afterEach() in a test suite?
+Productivity
+Application design
+Code Reuse
+Application Maintainability
 
-npm, short for Node Package Manager, is two things: first and foremost, it is an online repository for the publishing of open-source Node.js projects; second, it is a command-line utility for interacting with said repository that aids in package installation, version management, and dependency management.
+##### How does the repository pattern compare with an ORM?
 
-##### What is one downside of Test Driven Development
+Repositories deal with Domain/Business objects
+ORM handles db objects.
+When making a repository/facade, what flexibility do you gain? Facades serve as “static proxies” to underlying classes in the service container, providing the benefit of a terse, expressive syntax while maintaining more testability and flexibility than traditional static methods.
 
-It’s difficult to write good tests that cover the essentials and avoid the superfluous.
-It takes time and effort to maintain the test suite – it must be reconfigured for maximum value.
-If the design is changing rapidly, you’ll need to keep changing your tests. You could end up wasting a lot of time
+##### Name 3 cloud based NoSQL Databases
 
-##### What’s the primary difference between ES6 Classes and Constructor/Prototype Classes?
+Azure Cosmos DB..
+Amazon DynamoDB.
+MongoDB.
 
-Classes can’t be called without new, but functions intended as constructors can (and their this will be wrong)
+#### Document the following Vocabulary Terms
 
-Classes can extend more types than constructors can (like functions and arrays)
+1. lifecycle:the series of changes in the life of an organism including reproduction.
 
-Classes’ prototypes are their parents (they inherit static properties)
+2. collections: collection is a class used to represent a set of similar data type items as a single unit.
 
-Non-classes can’t extend classes because they can’t call the parent constructor
+3. “Repository” design pattern:is a kind of container where data access logic is stored.
 
-##### Name a use case for a static method
+4. mongoose middleware:functions which are passed control during execution of asynchronous functions.
 
-##### Write an example of a Higher Order function and describe the use case it solves
+5. Object Relation Mapping (ORM):programming technique for converting data between incompatible type systems using object-oriented programming languages.
 
-## Vocabulary Terms
+## Preview
 
-- functional programming
-  Functional programming languages are specially designed to handle symbolic computation and list processing applications.
+HTTP stands for Hypertext Transfer Protocol. It’s a stateless, application-layer protocol for communicating between distributed systems, and is the foundation of the modern web.
 
-- pure function
-  A pure function’s return value is based only on its inputs and has no other dependencies or effects on the overall program.
+HTTP Basics
+HTTP allows for communication between a variety of hosts and clients, and supports a mixture of network configurations.
 
-- higher-order function
-  A function that can take another function as an argument or returns a function as a result.
+This makes HTTP a stateless protocol. The communication usually takes place over TCP/IP, but any reliable transport can be used. The default port for TCP/IP is 80, but other ports can also be used.
 
-- immutable state
-  An object who state cannot be modified after it is created.
+Communication between a host and a client occurs, via a request/response pair. The client initiates an HTTP request message, which is serviced through a HTTP response message in return. We will look at this fundamental message-pair in the next section.
 
-- object
-  Objects are containers for named values called properties or methods.
+REST is acronym for REpresentational State Transfer. It is architectural style for distributed hypermedia systems and was first presented by Roy Fielding in 2000 in his famous dissertation.
 
-- object-oriented programming (OOP)
-  OOP refers to a type of programming in which we define the data-type of a data-structure, and also the types of operations (methods) that can be applied to the data-structure.
+REST and HTTP are not same because REST also intends to make the web (internet) more streamline and standard, he advocates using REST principles more strictly. And that’s from where people try to start comparing REST with web (HTTP).
 
-- class
-  A class is a type of function, but instead of using the keyword function to initiate it, we use the keyword class, and the properties are assigned inside a constructor() method.
-
-- prototype
-  All JavaScript objects inherit properties and methods from a prototype.
-
-- super
-  The super keyword is used to access and call functions on an object's parent.
-
-- inheritance
-  In simple terms, inheritance is the concept of one thing gaining the properties or behaviors of something else. To say A inherits from B, is saying that A is a type of B.
-
-- constructor
-  A constructor is a function that creates an instance of an object.
-
-- instance
-  An instance means a reference to an object created by the new keyword.
-
-- context
-  Refers to the scope of this.
-
-- this
-  Refers to the object it belongs to.
-
-- Test Driven Development (TDD)
-  TDD is the act of first deciding what you want your program to do, formulating a failing test, then writing the code to make that test pass.
-
-- Jest
-  Jest is a JS library for creating, running, and structuring tests.
-
-- Continuous Integration (CI)
-  The practice of creating frequent and isolated changes in code, which are immediately tested and reported on when they are added to a larger code base.
-
-- unit test
-  A unit test is designed to test an individual function or library in your code.
-
-## Preparation Materials
-
-### SQL vs NoSQL
-
-| DB  | SQL                                                                                                                                                                                                                                                   | NoSQL                                                                                                                                                                                            |
-| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 1   | SQL databases are primarily called as Relational Databases (RDBMS)                                                                                                                                                                                    | NoSQL database are primarily called as non-relational or distributed database.                                                                                                                   |
-| 2   | SQL databases are table based databases whereas NoSQL databases are document based, key-value pairs, graph databases or wide-column stores. This means that SQL databases represent data in form of tables which consists of n number of rows of data | NoSQL databases are the collection of key-value pair, documents, graph databases or wide-column stores which do not have standard schema definitions which it needs to adhered to.               |
-| 3   | SQL databases have predefined schema                                                                                                                                                                                                                  | NoSQL databases have dynamic schema for unstructured data.                                                                                                                                       |
-| 4   | SQL databases are vertically scalable whereas the NoSQL databases are horizontally scalable. SQL databases are scaled by increasing the horse-power of the hardware.                                                                                  | NoSQL databases are scaled by increasing the databases servers in the pool of resources to reduce the load.                                                                                      |
-| 5   | SQL databases uses SQL ( structured query language ) for defining and manipulating the data, which is very powerful.                                                                                                                                  | In NoSQL database, queries are focused on collection of documents. Sometimes it is also called as UnQL (Unstructured Query Language). The syntax of using UnQL varies from database to database. |
-| 6   | SQL database examples: MySql, Oracle, Sqlite, Postgres and MS-SQL.                                                                                                                                                                                    | NoSQL database examples: MongoDB, BigTable, Redis, RavenDb, Cassandra, Hbase, Neo4j and CouchDb                                                                                                  |
+Resource Methods
+Important thing associated with REST is resource methods to be used to perform the desired transition. A large number of people wrongly relate resource methods to HTTP GET/PUT/POST/DELETE methods.
