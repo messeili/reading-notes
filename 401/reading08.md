@@ -1,4 +1,4 @@
-# Reading03: Express Routing & Connected API
+# Reading08: Express Routing & Connected API
 
 ## Review, Research, and Discussion
 
