@@ -1,4 +1,4 @@
-# Reading03: Express Routing & Connected API
+# Reading08: Express Routing & Connected API
 
 ## Review, Research, and Discussion
 
@@ -22,9 +22,7 @@ if not using or passing the `next` parameter
 6. What can cause express to error with "Request headers sent twice, cannot start a second response"
    when sending a response twice
 
----
-
-## Vocabulary
+### Definitions:
 
 - **Middleware** : functions that have access to the request, the response object, and the next middleware function in the application's request-response cycle. The next middleware function is commonly denoted by a variable named next.
 
@@ -36,8 +34,6 @@ if not using or passing the `next` parameter
 
 - **Routing Middleware** : Router-level middleware works in the same way as application-level middleware, except it is bound to an instance of express.Router()..
 
----
-
 ## Preparation Materials
 
 ### Routing
@@ -48,25 +44,10 @@ You define routing using methods of the Express app object that correspond to HT
 
 These routing methods specify a callback function (sometimes called “handler functions”) called when the application receives a request to the specified route (endpoint) and HTTP method. In other words, the application “listens” for requests that match the specified route(s) and method(s), and when it detects a match, it calls the specified callback function.
 
+- `app.use()` : to specify middleware as the callback function
 - `app.get()` : to handle GET requests
 - `app.post()` : to handle POST requests
 - `app.all()` : to handle ALL HTTP requests
-- `app.use()` : to specify middleware as the callback function
-
-Example.
-
-```javascript
-const express = require('express');
-const app = express();
-// respond with "hello world" when a GET request is made to the homepage
-app.get('/', (req, res) => {
-  res.send('hello world');
-});
-```
-
-### Route Methods
-
-A route method is derived from one of the HTTP methods, and is attached to an instance of the express class.
 
 ### Response Methods
 
@@ -80,54 +61,3 @@ A route method is derived from one of the HTTP methods, and is attached to an in
 | res.end()        | End the response process.                                                             |
 | res.json()       | Send a JSON response.                                                                 |
 | res.sendStatus() | Set the response status code and send its string representation as the response body. |
-
-### app.route().
-
-You can create chainable route handlers for a route path by using app.route(). Because the path is specified at a single location, creating modular routes is helpful, as is reducing redundancy and typos. For more information about routes.
-
-```javascript
-app
-  .route('/book')
-  .get(function (req, res) {
-    res.send('Get a random book');
-  })
-  .post(function (req, res) {
-    res.send('Add a book');
-  })
-  .put(function (req, res) {
-    res.send('Update the book');
-  });
-```
-
-### express.Router
-
-Use the express.Router class to create modular, mountable route handlers. A Router instance is a complete middleware and routing system; for this reason, it is often referred to as a "mini-app".
-
-```javascript
-let express = require('express');
-let router = express.Router();
-
-// middleware that is specific to this router
-router.use(function timeLog(req, res, next) {
-  console.log('Time: ', Date.now());
-  next();
-});
-// define the home page route
-router.get('/', function (req, res) {
-  res.send('Birds home page');
-});
-// define the about route
-router.get('/about', function (req, res) {
-  res.send('About birds');
-});
-
-module.exports = router;
-```
-
-```javascript
-var birds = require('./birds');
-
-// ...
-
-app.use('/birds', birds);
-```
