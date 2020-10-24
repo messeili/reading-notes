@@ -1,102 +1,45 @@
-# Reading03: Data Modeling & NoSQL Databases
+# Reading11: Authentication
 
-## Questions:
+## Review, Research, and Discussion
 
-##### Name 3 advantages to Test Driven Development
+1. Explain what a “Singleton” is (in Computer Science terms)
+   it is a software design pattern that restricts the instantiation of a class to one "single" instance. This is useful when exactly one object is needed to coordinate actions across the system.
 
-1. Better program design and higher code quality
-2. Detailed project documentation
-3. TDD reduces the time required for project development
+2. Explain how the Singleton pattern can be used with Node modules, specifically with classes
+3. If you were tasked with building a middleware system like Express uses, what approach might you take to construct/operate it?
 
-##### In what case would you need to use beforeEach() or afterEach() in a test suite?
+## Terms
 
-npm, short for Node Package Manager, is two things: first and foremost, it is an online repository for the publishing of open-source Node.js projects; second, it is a command-line utility for interacting with said repository that aids in package installation, version management, and dependency management.
+**Router Middleware** : functions that have access to the request object, the response object.
+**Dynamic Module Loading** :import/export aim to provide a backbone for the code structure. That’s a good thing, as code structure can be analyzed, modules can be gathered and bundled into one file by special tools.
+**Singleton Pattern** :design pattern that restricts the instantiation of a class to one “single” instance.
+**CRUD -> REST Method Matches** CRUD: CREATE READ UPDATE DELETE -> REST: GET POST PUT DELETE
+**Mock Testing** : an approach to unit testing that lets you make assertions about how the code under test is interacting with other system modules.
 
-##### What is one downside of Test Driven Development
+## Preview
 
-It’s difficult to write good tests that cover the essentials and avoid the superfluous.
-It takes time and effort to maintain the test suite – it must be reconfigured for maximum value.
-If the design is changing rapidly, you’ll need to keep changing your tests. You could end up wasting a lot of time
+##### Authorization
 
-##### What’s the primary difference between ES6 Classes and Constructor/Prototype Classes?
+This is the most common scenario for using JWT. Once the user is logged in, each subsequent request will include the JWT, allowing the user to access routes, services, and resources that are permitted with that token. Single Sign On is a feature that widely uses JWT nowadays, because of its small overhead and its ability to be easily used across different domains.
 
-Classes can’t be called without new, but functions intended as constructors can (and their this will be wrong)
+##### Authentication
 
-Classes can extend more types than constructors can (like functions and arrays)
+basic access authentication is a method for an HTTP client to provide a user name and password when making a request. it does not require cookies, session identifiers, or login pages.
 
-Classes’ prototypes are their parents (they inherit static properties)
+##### BCrypt
 
-Non-classes can’t extend classes because they can’t call the parent constructor
+bcrypt is a password-hashing function. Besides incorporating a salt to protect against rainbow table attacks, bcrypt is an adaptive function: over time, the iteration count can be increased to make it slower, so it remains resistant to brute-force search attacks even with increasing computation power.
 
-##### Name a use case for a static method
+##### JSON Web Tokens (JWT)
 
-##### Write an example of a Higher Order function and describe the use case it solves
+JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be transferred between two parties,The claims in a JWT are encoded as a JSON object that is used as the payload of a JSON Web Signature (JWS) structure or as the plaintext of a JSON Web Encryption (JWE) structure.
 
-## Vocabulary Terms
+##### JWT structure
 
-- functional programming
-  Functional programming languages are specially designed to handle symbolic computation and list processing applications.
+JSON Web Tokens consist of three parts separated by dots (.), which are:
 
-- pure function
-  A pure function’s return value is based only on its inputs and has no other dependencies or effects on the overall program.
+Header : The header typically consists of two parts: the type of the token, which is JWT, and the signing algorithm being used.
 
-- higher-order function
-  A function that can take another function as an argument or returns a function as a result.
+Payload : payload contains the claims. Claims are statements about an entity (typically, the user) and additional data.
 
-- immutable state
-  An object who state cannot be modified after it is created.
-
-- object
-  Objects are containers for named values called properties or methods.
-
-- object-oriented programming (OOP)
-  OOP refers to a type of programming in which we define the data-type of a data-structure, and also the types of operations (methods) that can be applied to the data-structure.
-
-- class
-  A class is a type of function, but instead of using the keyword function to initiate it, we use the keyword class, and the properties are assigned inside a constructor() method.
-
-- prototype
-  All JavaScript objects inherit properties and methods from a prototype.
-
-- super
-  The super keyword is used to access and call functions on an object's parent.
-
-- inheritance
-  In simple terms, inheritance is the concept of one thing gaining the properties or behaviors of something else. To say A inherits from B, is saying that A is a type of B.
-
-- constructor
-  A constructor is a function that creates an instance of an object.
-
-- instance
-  An instance means a reference to an object created by the new keyword.
-
-- context
-  Refers to the scope of this.
-
-- this
-  Refers to the object it belongs to.
-
-- Test Driven Development (TDD)
-  TDD is the act of first deciding what you want your program to do, formulating a failing test, then writing the code to make that test pass.
-
-- Jest
-  Jest is a JS library for creating, running, and structuring tests.
-
-- Continuous Integration (CI)
-  The practice of creating frequent and isolated changes in code, which are immediately tested and reported on when they are added to a larger code base.
-
-- unit test
-  A unit test is designed to test an individual function or library in your code.
-
-## Preparation Materials
-
-### SQL vs NoSQL
-
-| DB  | SQL                                                                                                                                                                                                                                                   | NoSQL                                                                                                                                                                                            |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| 1   | SQL databases are primarily called as Relational Databases (RDBMS)                                                                                                                                                                                    | NoSQL database are primarily called as non-relational or distributed database.                                                                                                                   |
-| 2   | SQL databases are table based databases whereas NoSQL databases are document based, key-value pairs, graph databases or wide-column stores. This means that SQL databases represent data in form of tables which consists of n number of rows of data | NoSQL databases are the collection of key-value pair, documents, graph databases or wide-column stores which do not have standard schema definitions which it needs to adhered to.               |
-| 3   | SQL databases have predefined schema                                                                                                                                                                                                                  | NoSQL databases have dynamic schema for unstructured data.                                                                                                                                       |
-| 4   | SQL databases are vertically scalable whereas the NoSQL databases are horizontally scalable. SQL databases are scaled by increasing the horse-power of the hardware.                                                                                  | NoSQL databases are scaled by increasing the databases servers in the pool of resources to reduce the load.                                                                                      |
-| 5   | SQL databases uses SQL ( structured query language ) for defining and manipulating the data, which is very powerful.                                                                                                                                  | In NoSQL database, queries are focused on collection of documents. Sometimes it is also called as UnQL (Unstructured Query Language). The syntax of using UnQL varies from database to database. |
-| 6   | SQL database examples: MySql, Oracle, Sqlite, Postgres and MS-SQL.                                                                                                                                                                                    | NoSQL database examples: MongoDB, BigTable, Redis, RavenDb, Cassandra, Hbase, Neo4j and CouchDb                                                                                                  |
+Signature : To create the signature part you have to take the encoded header, the encoded payload, a secret, the algorithm specified in the header, and sign that.
