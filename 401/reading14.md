@@ -1,102 +1,57 @@
-# Reading03: Data Modeling & NoSQL Databases
+# Reading14: Access Control (ACL)
 
-## Questions:
+## Review, Research, and Discussion
 
-##### Name 3 advantages to Test Driven Development
+**When is Basic Authorization used vs. Bearer Authorization?** basic authentication authenticate using a username and a secret but bearer authentication authenticate using a token.
+**What does the JSON Web Token package do?** It works this way: the server generates a token that certifies the user identity, and sends it to the client.
+**What considerations should we make when creating and storing a SECRET?** should be sored in the .env file locally and should be long enough.
 
-1. Better program design and higher code quality
-2. Detailed project documentation
-3. TDD reduces the time required for project development
+## Terms
 
-##### In what case would you need to use beforeEach() or afterEach() in a test suite?
+**encryption** is the process of taking plain text, like a text message or email, and scrambling it into an unreadable format
+**token**
+**bearer** Authentication pattern using a token
+**secret** a key specialized for a user
+**JSON Web Token** is a standard used to create access tokens for an application
 
-npm, short for Node Package Manager, is two things: first and foremost, it is an online repository for the publishing of open-source Node.js projects; second, it is a command-line utility for interacting with said repository that aids in package installation, version management, and dependency management.
+## Preview
 
-##### What is one downside of Test Driven Development
+##### RBAC
 
-It’s difficult to write good tests that cover the essentials and avoid the superfluous.
-It takes time and effort to maintain the test suite – it must be reconfigured for maximum value.
-If the design is changing rapidly, you’ll need to keep changing your tests. You could end up wasting a lot of time
+RBAC is nothing more than the idea of assigning system access to users based on their role within an organization. The system needs of a given workforce are analyzed, with users grouped into roles based on common job responsibilities and system access needs. Access is then assigned to each person based strictly on their role assignment. With tight adherence to access requirements established for each role, access management becomes much easier.
 
-##### What’s the primary difference between ES6 Classes and Constructor/Prototype Classes?
+I would suggest that one reason RBAC is not used more frequently is that for small to medium sized companies, it seems easier to just do this on an ad-hoc basis as each employee joins the company. The challenge is that with as many permutations as can exist with just a few systems involved, the approach becomes unsustainable.
 
-Classes can’t be called without new, but functions intended as constructors can (and their this will be wrong)
+##### Benefits of RBAC
 
-Classes can extend more types than constructors can (like functions and arrays)
+With the proper implementation of RBAC, the assignment of access rights becomes systematic and repeatable. Further, it is much easier to audit user rights, and to correct any issues identified.
 
-Classes’ prototypes are their parents (they inherit static properties)
+RBAC may sound intimidating, but it can in reality be easy to implement, and will make the ongoing management of access rights much easier and more secure.
 
-Non-classes can’t extend classes because they can’t call the parent constructor
+##### RBAC implementation
 
-##### Name a use case for a static method
+Hopefully I have convinced you to take a closer look at RBAC. If so, consider the following simplified five-step approach to getting it implemented:
 
-##### Write an example of a Higher Order function and describe the use case it solves
+1. Inventory your systems
 
-## Vocabulary Terms
+Figure out what resources you have for which you need to control access, if you don't already have them listed. Examples would include an email system, customer database, contact management system, major folders on a file server, etc.
 
-- functional programming
-  Functional programming languages are specially designed to handle symbolic computation and list processing applications.
+2. Analyze your workforce and create roles
 
-- pure function
-  A pure function’s return value is based only on its inputs and has no other dependencies or effects on the overall program.
+You need to group your workforce members into roles with common access needs. Avoid the temptation to have too many roles defined. Keep them as simple and stratified as possible.
 
-- higher-order function
-  A function that can take another function as an argument or returns a function as a result.
+For example, you might have a basic user role, which includes the access any employee would need, such as email and the intranet site. Another role might be a customer service rep, that would have read/write access to the customer database, and a customer database administrator, that would have full control of the customer database.
 
-- immutable state
-  An object who state cannot be modified after it is created.
+3. Assign people to roles
 
-- object
-  Objects are containers for named values called properties or methods.
+Now that you have a list of roles and their access rights, figure out which role(s) each employee belongs in, and set their access accordingly.
 
-- object-oriented programming (OOP)
-  OOP refers to a type of programming in which we define the data-type of a data-structure, and also the types of operations (methods) that can be applied to the data-structure.
+4. Never make one-off changes
 
-- class
-  A class is a type of function, but instead of using the keyword function to initiate it, we use the keyword class, and the properties are assigned inside a constructor() method.
+Resist any temptation to make a one-off change for an employee with unusual needs. If you begin doing this, your RBAC system will quickly begin to unravel. Change the roles as required or add new ones when really necessary.
 
-- prototype
-  All JavaScript objects inherit properties and methods from a prototype.
+5. Audit
 
-- super
-  The super keyword is used to access and call functions on an object's parent.
+Periodically review your roles, the employees assigned to them, and the access permitted for each. If you discover, for example, that a role has unnecessary access to a particular system, change the role and adjust the access level for all employees in that role.
 
-- inheritance
-  In simple terms, inheritance is the concept of one thing gaining the properties or behaviors of something else. To say A inherits from B, is saying that A is a type of B.
-
-- constructor
-  A constructor is a function that creates an instance of an object.
-
-- instance
-  An instance means a reference to an object created by the new keyword.
-
-- context
-  Refers to the scope of this.
-
-- this
-  Refers to the object it belongs to.
-
-- Test Driven Development (TDD)
-  TDD is the act of first deciding what you want your program to do, formulating a failing test, then writing the code to make that test pass.
-
-- Jest
-  Jest is a JS library for creating, running, and structuring tests.
-
-- Continuous Integration (CI)
-  The practice of creating frequent and isolated changes in code, which are immediately tested and reported on when they are added to a larger code base.
-
-- unit test
-  A unit test is designed to test an individual function or library in your code.
-
-## Preparation Materials
-
-### SQL vs NoSQL
-
-| DB  | SQL                                                                                                                                                                                                                                                   | NoSQL                                                                                                                                                                                            |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| 1   | SQL databases are primarily called as Relational Databases (RDBMS)                                                                                                                                                                                    | NoSQL database are primarily called as non-relational or distributed database.                                                                                                                   |
-| 2   | SQL databases are table based databases whereas NoSQL databases are document based, key-value pairs, graph databases or wide-column stores. This means that SQL databases represent data in form of tables which consists of n number of rows of data | NoSQL databases are the collection of key-value pair, documents, graph databases or wide-column stores which do not have standard schema definitions which it needs to adhered to.               |
-| 3   | SQL databases have predefined schema                                                                                                                                                                                                                  | NoSQL databases have dynamic schema for unstructured data.                                                                                                                                       |
-| 4   | SQL databases are vertically scalable whereas the NoSQL databases are horizontally scalable. SQL databases are scaled by increasing the horse-power of the hardware.                                                                                  | NoSQL databases are scaled by increasing the databases servers in the pool of resources to reduce the load.                                                                                      |
-| 5   | SQL databases uses SQL ( structured query language ) for defining and manipulating the data, which is very powerful.                                                                                                                                  | In NoSQL database, queries are focused on collection of documents. Sometimes it is also called as UnQL (Unstructured Query Language). The syntax of using UnQL varies from database to database. |
-| 6   | SQL database examples: MySql, Oracle, Sqlite, Postgres and MS-SQL.                                                                                                                                                                                    | NoSQL database examples: MongoDB, BigTable, Redis, RavenDb, Cassandra, Hbase, Neo4j and CouchDb                                                                                                  |
+As an example, many healthcare organizations, given the need for regulatory compliance in controlling access to medical records, use RBAC to define exactly what access to medical records each type of clinician may need. While a doctor might have almost unlimited access to the records of patients he/she manages, a receptionist might be limited to basic contact information needed to manage appointments. Given the large number of staff members in well stratified roles, RBAC is an efficient way to control record access in compliance with HIPAA, and other regulations.
