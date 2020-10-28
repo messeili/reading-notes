@@ -1,57 +1,48 @@
-# Reading14: Access Control (ACL)
+# Reading14: Trees
 
-## Review, Research, and Discussion
+##### Binary Trees
 
-**When is Basic Authorization used vs. Bearer Authorization?** basic authentication authenticate using a username and a secret but bearer authentication authenticate using a token.
-**What does the JSON Web Token package do?** It works this way: the server generates a token that certifies the user identity, and sends it to the client.
-**What considerations should we make when creating and storing a SECRET?** should be sored in the .env file locally and should be long enough.
+There is no specific sorting order for a binary tree. Nodes can be added into a binary tree wherever space allows. Here is what a binary tree looks like:
 
-## Terms
+![tree](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-15/resources/images/BinaryTree2.PNG)
+Adding a node
+Because there are no structural rules for where nodes are “supposed to go” in a binary tree, it really doesn’t matter where a new node gets placed.
 
-**encryption** is the process of taking plain text, like a text message or email, and scrambling it into an unreadable format
-**token**
-**bearer** Authentication pattern using a token
-**secret** a key specialized for a user
-**JSON Web Token** is a standard used to create access tokens for an application
+One strategy for adding a new node to a binary tree is to fill all “child” spots from the top down. To do so, we would leverage the use of breadth first traversal. During the traversal, we find the first node that does not have 2 child nodes, and insert the new node as a child. We fill the child slots from left to right.
 
-## Preview
+In the event you would like to have a node placed in a specific location, you need to reference both the new node to create, and the parent node upon which the child is attached to.
 
-##### RBAC
+Big O
+The Big O time complexity for inserting a new node is O(n). Searching for a specific node will also be O(n). Because of the lack of organizational structure in a Binary Tree, the worst case for most operations will involve traversing the entire tree. If we assume that a tree has n nodes, then in the worst case we will have to look at n items, hence the O(n) complexity.
 
-RBAC is nothing more than the idea of assigning system access to users based on their role within an organization. The system needs of a given workforce are analyzed, with users grouped into roles based on common job responsibilities and system access needs. Access is then assigned to each person based strictly on their role assignment. With tight adherence to access requirements established for each role, access management becomes much easier.
+The Big O space complexity for a node insertion using breadth first insertion will be O(w), where w is the largest width of the tree. For example, in the above tree, w is 4.
 
-I would suggest that one reason RBAC is not used more frequently is that for small to medium sized companies, it seems easier to just do this on an ad-hoc basis as each employee joins the company. The challenge is that with as many permutations as can exist with just a few systems involved, the approach becomes unsustainable.
+A “perfect” binary tree is one where every non-leaf node has exactly two children. The maximum width for a perfect binary tree, is 2^(h-1), where h is the height of the tree. Height can be calculated as log n, where n is the number of nodes.
 
-##### Benefits of RBAC
+##### Binary Search Trees
 
-With the proper implementation of RBAC, the assignment of access rights becomes systematic and repeatable. Further, it is much easier to audit user rights, and to correct any issues identified.
+A Binary Search Tree (BST) is a type of tree that does have some structure attached to it. In a BST, nodes are organized in a manner where all values that are smaller than the root are placed to the left, and all values that are larger than the root are placed to the right.
 
-RBAC may sound intimidating, but it can in reality be easy to implement, and will make the ongoing management of access rights much easier and more secure.
+Here is how we would change our Binary Tree example into a Binary Search Tree:
 
-##### RBAC implementation
+![Binary Search Tree](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-15/resources/images/BST1.PNG)
 
-Hopefully I have convinced you to take a closer look at RBAC. If so, consider the following simplified five-step approach to getting it implemented:
+Searching a BST
+Searching a BST can be done quickly, because all you do is compare the node you are searching for against the root of the tree or sub-tree. If the value is smaller, you only traverse the left side. If the value is larger, you only traverse the right side.
 
-1. Inventory your systems
+Let’s say we are searching 15. We start by comparing the value 15 to the value of the root, 23.
 
-Figure out what resources you have for which you need to control access, if you don't already have them listed. Examples would include an email system, customer database, contact management system, major folders on a file server, etc.
+15 < 23, so we traverse the left side of the tree. We then treat 8 as our new “root” to compare against.
 
-2. Analyze your workforce and create roles
+15 > 8, so we traverse the right side. 16 is our new root.
 
-You need to group your workforce members into roles with common access needs. Avoid the temptation to have too many roles defined. Keep them as simple and stratified as possible.
+15 < 16, so we traverse the left side. And aha! 15 is our new root and also a match with what we were searching for.
 
-For example, you might have a basic user role, which includes the access any employee would need, such as email and the intranet site. Another role might be a customer service rep, that would have read/write access to the customer database, and a customer database administrator, that would have full control of the customer database.
+![Binary Search Tree1](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-15/resources/images/BST2.PNG)
 
-3. Assign people to roles
+The best way to approach a BST search is with a while loop. We cycle through the while loop until we hit a leaf, or until we reach a match with what we’re searching for.
 
-Now that you have a list of roles and their access rights, figure out which role(s) each employee belongs in, and set their access accordingly.
+Big O
+The Big O time complexity of a Binary Search Tree’s insertion and search operations is O(h), or O(height). In the worst case, we will have to search all the way down to a leaf, which will require searching through as many nodes as the tree is tall. In a balanced (or “perfect”) tree, the height of the tree is log(n). In an unbalanced tree, the worst case height of the tree is n.
 
-4. Never make one-off changes
-
-Resist any temptation to make a one-off change for an employee with unusual needs. If you begin doing this, your RBAC system will quickly begin to unravel. Change the roles as required or add new ones when really necessary.
-
-5. Audit
-
-Periodically review your roles, the employees assigned to them, and the access permitted for each. If you discover, for example, that a role has unnecessary access to a particular system, change the role and adjust the access level for all employees in that role.
-
-As an example, many healthcare organizations, given the need for regulatory compliance in controlling access to medical records, use RBAC to define exactly what access to medical records each type of clinician may need. While a doctor might have almost unlimited access to the records of patients he/she manages, a receptionist might be limited to basic contact information needed to manage appointments. Given the large number of staff members in well stratified roles, RBAC is an efficient way to control record access in compliance with HIPAA, and other regulations.
+The Big O space complexity of a BST search would be O(1). During a search, we are not allocating any additional space.
