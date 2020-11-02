@@ -1,6 +1,4 @@
-# Reading14: Access Control (ACL)
-
-## Review, Research, and Discussion
+# Reading18: Socket.io
 
 ## Review, Research, and Discussion
 
