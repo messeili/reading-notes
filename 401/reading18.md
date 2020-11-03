@@ -22,7 +22,7 @@ Yes, you need a separate connection factory for each server/port.
 
 Yes, it can.
 
-##Terms
+## Terms
 
 - **OSI Model**: conceptual framework used to describe the functions of a networking system.
 - **TCP Model**: conceptual model and set of communications protocols used in the Internet and similar computer networks.
