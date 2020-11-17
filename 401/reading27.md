@@ -2,19 +2,18 @@
 
 ## Review, Research, and Discussion
 
-- **Does a deployed React application require a server?**  
-  No
-- **Why do we prefer to test a React application at the behavior rather than the unit level?** Testing components that are not purely functional and are responsible for behavior isn’t difficult, but there aren’t as many resources on the web that describe how to do this.
-- **What does npm run build do?**  
-  npm run build does nothing unless you specify what “build” does in your package.
-- **Describe the actual composition / architecture of a React application**
+- **Can a parent component access the state of a child component?**  
+  no
+- **What can be passed along in a prop variable?**  
+  methods and variables
+- **How can a child component “know” the state of another component??**  
+  we can get hte state with props to the parent then from the parent to the child
 
 ## Terms
 
-- **BDD**: behavior-driven development
-- **Acceptance Tests**: technique performed to determine whether or not the software system has met the requirement specifications.
-- **mounting**: process by which the operating system makes files and directories on a storage device
-- **build**: process of converting source code files into standalone software artifact(s) that can be run on a computer
+- **component props**: component properties that can be passed to other components
+- **component state**: object that is managed inside the component itself
+- **application state**: interface between your data from any kind of backend or local change and the representation of this data with UI-elements in the frontend.
 
 ## Preview
 
