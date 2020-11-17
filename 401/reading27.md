@@ -1,4 +1,4 @@
-# Reading27: Props and State
+# Reading28: Component Composition
 
 ## Review, Research, and Discussion
 
