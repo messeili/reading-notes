@@ -30,6 +30,7 @@ here I will take my reading notes for each class you can see the table below, I 
 | Reading19          | [Link](https://messeili.github.io/reading-notes/401/reading19) |
 | Reading26          | [Link](https://messeili.github.io/reading-notes/401/reading26) |
 | Reading27          | [Link](https://messeili.github.io/reading-notes/401/reading27) |
+| Reading28          | [Link](https://messeili.github.io/reading-notes/401/reading28) |
 | Reading29          | [Link](https://messeili.github.io/reading-notes/401/reading29) |
 | Reading30          | [Link](https://messeili.github.io/reading-notes/401/reading30) |
 | Reading31          | [Link](https://messeili.github.io/reading-notes/401/reading31) |
