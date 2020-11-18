@@ -1,69 +1,21 @@
-# Reading27: Props and State
+# Reading30: Hash Tables
 
-## Review, Research, and Discussion
+#### Hashing
 
-- **Does a deployed React application require a server?**  
-  No
-- **Why do we prefer to test a React application at the behavior rather than the unit level?** Testing components that are not purely functional and are responsible for behavior isn’t difficult, but there aren’t as many resources on the web that describe how to do this.
-- **What does npm run build do?**  
-  npm run build does nothing unless you specify what “build” does in your package.
-- **Describe the actual composition / architecture of a React application**
+Basically, a hash code turns a key into an integer. It’s very important that hash codes are deterministic: their output is determined only by their input. Hash codes should never have randomness to them. The same key should always produce the same hash code.
 
-## Terms
+Creating a Hash A hash table traditionally is created from an array. I always like the size 1024. this is important for index placement. After you have created your array of the appropriate size, do some sort of logic to turn that “key” into a numeric number value. Here is a possible suggestion:
 
-- **BDD**: behavior-driven development
-- **Acceptance Tests**: technique performed to determine whether or not the software system has met the requirement specifications.
-- **mounting**: process by which the operating system makes files and directories on a storage device
-- **build**: process of converting source code files into standalone software artifact(s) that can be run on a computer
-
-## Preview
-
-##### React Props
-
-React Props are like function arguments in JavaScript and attributes in HTML.
-
-To send props into a component, use the same syntax as HTML attributes:
-
-Example Add a "brand" attribute to the Car element:
+Add or multiply all the ASCII values together. Multiply it by a prime number such as 599. Use modulo to get the remainder of the result, when divided by the total size of the array. Insert into the array at that index. Example:
 
 ```
-const myelement = <Car brand="Ford" />;
-```
+Key = "Cat" Value = "Josie"
 
-The component receives the argument as a props object:
+67 + 97 + 116 = 280
 
-Example Use the brand attribute in the component:
+280 \* 599 = 69648
 
-```
-class Car extends React.Component {
-  render() {
-    return <h2>I am a {this.props.brand}!</h2>;
-  }
-}
-```
+69648 % 1024 = 16
 
-##### React components has a built-in state object.
-
-The state object is where you store property values that belongs to the component.
-
-When the state object changes, the component re-renders.
-
-Creating the state Object The state object is initialized in the constructor:
-
-Example: Specify the state object in the constructor method:
-
-```
-class Car extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {brand: "Ford"};
-  }
-  render() {
-    return (
-      <div>
-        <h1>My Car</h1>
-      </div>
-    );
-  }
-}
+Key gets placed in index of 16.
 ```
