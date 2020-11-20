@@ -1,26 +1,30 @@
-# Reading27: Props and State
+# Reading31: Hooks API
 
 ## Review, Research, and Discussion
 
-- **Does a deployed React application require a server?**  
-  No
-- **Why do we prefer to test a React application at the behavior rather than the unit level?** Testing components that are not purely functional and are responsible for behavior isn’t difficult, but there aren’t as many resources on the web that describe how to do this.
-- **What does npm run build do?**  
-  npm run build does nothing unless you specify what “build” does in your package.
-- **Describe the actual composition / architecture of a React application**
+- **Why do we not need more .html pages in a multi-page React app?**  
+  Because we are following the SPA (single page application)
+- **If we wanted a component to show up on every page, where would we put it and why?**  
+  Inside the <BrowserRouter />, outside a <Route />
+- **What does props.children contain?**  
+  Whatever included between the opening and closing tags when invoking a component.
 
 ## Terms
 
-- **BDD**: behavior-driven development
-- **Acceptance Tests**: technique performed to determine whether or not the software system has met the requirement specifications.
-- **mounting**: process by which the operating system makes files and directories on a storage device
-- **build**: process of converting source code files into standalone software artifact(s) that can be run on a computer
+- **Composition**: The process of building components from other components.
+- **Children / Child Components**: a components inside other components that can be accessed throw props.children
+- **Hash Routing**: doing something in response to a change in the browser’s current URL using the portion of the page’s URL starting with #
+- **Link Routing**:
 
 ## Preview
 
-##### React Props
+##### React Hooks
 
-React Props are like function arguments in JavaScript and attributes in HTML.
+When and why we should use hooks?
+
+1. Huge components that are hard to refactor and test.
+1. Duplicated logic between different components and lifecycle methods.
+1. Complex patterns like render props and higher-order components.
 
 To send props into a component, use the same syntax as HTML attributes:
 
