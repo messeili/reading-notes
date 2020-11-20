@@ -18,7 +18,11 @@
 
 ## Preview
 
-##### React Hooks
+#### React Hooks
+
+Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
+
+What is a Hook? A Hook is a special function that lets you “hook into” React features. For example, useState is a Hook that lets you add React state to function components.
 
 When and why we should use hooks?
 
@@ -26,48 +30,35 @@ When and why we should use hooks?
 1. Duplicated logic between different components and lifecycle methods.
 1. Complex patterns like render props and higher-order components.
 
-To send props into a component, use the same syntax as HTML attributes:
+##### State Hook
 
-Example Add a "brand" attribute to the Car element:
+###### Declaring a State Variable
 
-```
-const myelement = <Car brand="Ford" />;
-```
-
-The component receives the argument as a props object:
-
-Example Use the brand attribute in the component:
+In a class, we initialize the count state to 0 by setting this.state to `{ count: 0 }` in the constructor:
 
 ```
-class Car extends React.Component {
-  render() {
-    return <h2>I am a {this.props.brand}!</h2>;
-  }
-}
-```
-
-##### React components has a built-in state object.
-
-The state object is where you store property values that belongs to the component.
-
-When the state object changes, the component re-renders.
-
-Creating the state Object The state object is initialized in the constructor:
-
-Example: Specify the state object in the constructor method:
-
-```
-class Car extends React.Component {
+class Example extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {brand: "Ford"};
+    this.state = {
+      count: 0
+    };
   }
-  render() {
-    return (
-      <div>
-        <h1>My Car</h1>
-      </div>
-    );
-  }
-}
 ```
+
+In a function component, we have no this, so we can’t assign or read this.state. Instead, we call the useState Hook directly inside our component:
+
+```
+import React, { useState } from 'react';
+
+function Example() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0);
+
+```
+
+What does calling useState do? It declares a “state variable”. Our variable is called count but we could call it anything else, like banana. This is a way to “preserve” some values between the function calls — useState is a new way to use the exact same capabilities that this.state provides in a class. Normally, variables “disappear” when the function exits but state variables are preserved by React.
+
+##### Effect Hook
+
+The Effect Hook lets you perform side effects in function components, you can think of `useEffect` Hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined.
