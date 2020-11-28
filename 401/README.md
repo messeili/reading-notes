@@ -39,3 +39,8 @@ here I will take my reading notes for each class you can see the table below, I 
 | Reading34          | [Link](https://messeili.github.io/reading-notes/401/reading34) |
 | Reading35          | [Link](https://messeili.github.io/reading-notes/401/reading35) |
 | Reading36          | [Link](https://messeili.github.io/reading-notes/401/reading36) |
+| Reading37          | [Link](https://messeili.github.io/reading-notes/401/reading37) |
+| Reading38          | [Link](https://messeili.github.io/reading-notes/401/reading38) |
+| Reading39          | [Link](https://messeili.github.io/reading-notes/401/reading39) |
+| Reading40          | [Link](https://messeili.github.io/reading-notes/401/reading40) |
+| Reading41          | [Link](https://messeili.github.io/reading-notes/401/reading41) |
