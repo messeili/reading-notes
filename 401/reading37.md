@@ -8,8 +8,8 @@
   to receive the action , then proceed depend on it
 - **What does an action contain?**  
   An object with a payload and type props
-  - **Why do we need to copy the state in a reducer?**  
-    because its read only
+- **Why do we need to copy the state in a reducer?**  
+  because its read only
 
 ## Terms
 
